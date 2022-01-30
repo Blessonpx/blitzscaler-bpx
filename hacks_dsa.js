@@ -58,7 +58,8 @@ function stepsAway(s1,s2){
 }
 
 
-// Compress String for this 
+// Compress String for repetition for characters
+
 function compressString(s){
   let output=''
   let count=1

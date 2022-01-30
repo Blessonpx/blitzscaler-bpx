@@ -57,6 +57,25 @@ function stepsAway(s1,s2){
   return true
 }
 
+
+// Compress String for this 
+function compressString(s){
+  let output=''
+  let count=1
+  for(i=0;i<s.length;i++){
+    cur=s[i]
+    next=s[i+1]
+    if(cur===next){
+      count++;
+    } else {
+      output+=cur+String(count);
+      count=1
+    }
+  }
+  return output.length<s.length?output:s
+}
+
+
 let r='raca'
 console.log(palinCheck_array(r))
 console.log(palinCheck_hash(r))

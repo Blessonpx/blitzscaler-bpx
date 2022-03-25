@@ -2,9 +2,24 @@
   Well-order property of BST, with unique elements ( given by description ) all value on left sub-tree < value of current node < all value on right sub-tree
   Algorithm:
   Three possible cases:
-Case_#1:
-Both p and q are smaller than current node, then search left-subtree by recursive
-Case_#2:
-Both p and q are larger than current node, then search right-subtree by recursive
-Case_#3:
-Both p and q are not on the same side of current node, then current node must be the Lowest common ancestor of ( p, q )
+  Case_#1:
+  Both p and q are smaller than current node, then search left-subtree by recursive
+  Case_#2:
+  Both p and q are larger than current node, then search right-subtree by recursive
+  Case_#3:
+  Both p and q are not on the same side of current node, then current node must be the Lowest common ancestor of ( p, q )
+
+- Amortize (Python)
+Amortize a 5% loan of 1000 with 4 annual payments of 90
+cashflows = [1000, -90, -90, -90, -90]
+list(accumulate(cashflows, lambda bal, pmt: bal*1.05 + pmt))
+>>>> [1000, 960.0, 918.0, 873.9000000000001, 827.5950000000001]
+
+- Calcualte Sum of Floors
+ Input [2,5,9]
+ Every Multiple within Max of Input [2,4,6,8,5,9] frequency made one
+ ie [0, 0, 1, 0, 1, 1, 1, 0, 1, 1]
+ quots=list(accumulate(incs)) 
+ sum of quots[for index Input]
+  Also used in Prefix Sum Of Frequencies
+  https://stackoverflow.com/questions/55904191/how-to-efficiently-calculate-prefix-sum-of-frequencies-of-characters-in-a-string

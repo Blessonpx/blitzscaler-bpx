@@ -23,3 +23,6 @@ list(accumulate(cashflows, lambda bal, pmt: bal*1.05 + pmt))
  sum of quots[for index Input]
   Also used in Prefix Sum Of Frequencies
   https://stackoverflow.com/questions/55904191/how-to-efficiently-calculate-prefix-sum-of-frequencies-of-characters-in-a-string
+
+- Minimum Size SubArray === Shortes SubArray with Sum K atleast
+
